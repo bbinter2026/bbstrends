@@ -326,5 +326,6 @@ async function uploadPosters(){
 function applyTheme(t){document.documentElement.dataset.theme=t;try{localStorage.setItem('bbs-theme',t)}catch(_){}}
 (function(){let t;try{t=localStorage.getItem('bbs-theme')}catch(_){}applyTheme(t||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));
   $('#tt').onclick=()=>applyTheme(document.documentElement.dataset.theme==='dark'?'light':'dark')})();
-async function route(){await load();document.title='BBS Trends — Vagas de emprego em Moçambique';const Q=new URLSearchParams(location.search),v=Q.get('vaga'),p=Q.get('p');location.hash==='#admin'?admin():v?detail(v):p?page(p):pub()}
+async function route(){try{await Promise.race([load(),new Promise((_,r)=>setTimeout(()=>r(new Error('timeout')),6000))])}catch(e){console.warn('Falha ao carregar dados:',e)}
+  document.title='BBS Trends — Vagas de emprego em Moçambique';const Q=new URLSearchParams(location.search),v=Q.get('vaga'),p=Q.get('p');location.hash==='#admin'?admin():v?detail(v):p?page(p):pub()}
 addEventListener('hashchange',route);route();
