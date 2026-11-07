@@ -1,0 +1,19 @@
+:root{--ink:#10242A;--teal:#0E3B43;--sun:#F2A900;--leaf:#0B7A4B;--red:#C8372D;--bg:#F4F7F6;--line:#D5DEDC}
+body{font-family:'Public Sans',system-ui,sans-serif;background:var(--bg);color:var(--ink)}
+h1,h2,h3,.disp{font-family:'Bricolage Grotesque',system-ui,sans-serif}
+:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+.chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:.35rem .8rem;font-size:.85rem;cursor:pointer}
+.chip[aria-pressed=true]{background:var(--teal);color:#fff;border-color:var(--teal)}
+.cv{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:#0E3B43}.card{transition:box-shadow .15s,transform .15s}.card:hover{box-shadow:0 8px 24px rgba(14,59,67,.14);transform:translateY(-2px)}.hero{background:linear-gradient(135deg,#0E3B43 0%,#0B5A58 100%);color:#fff}.hero input,.hero select{border:0}.info{background:#EAF0EE;border-radius:10px;padding:.7rem .9rem}.badge{font-size:.75rem;padding:.1rem .5rem;border-radius:6px;font-weight:600}
+.b-ok{background:#D9F2E6;color:#07553a}.b-rev{background:#FFF0C2;color:#6b4a00}.b-bad{background:#FADAD7;color:#8a1f17}.b-new{background:var(--sun);color:var(--ink)}
+.btn{background:var(--teal);color:#fff;border-radius:8px;padding:.55rem 1rem;font-weight:600}
+.btn:hover{background:#0a2c32}.btn2{border:1px solid var(--line);background:#fff;border-radius:8px;padding:.45rem .8rem;font-weight:500}
+select,input{border:1px solid var(--line);border-radius:8px;padding:.55rem .7rem;background:#fff;width:100%}
+
+:root{--card:#fff}
+:root[data-theme=dark]{--bg:#0B1A1E;--ink:#E6EEEC;--line:#2B4249;--card:#13262B}
+html[data-theme=dark] .bg-white,html[data-theme=dark] .chip,html[data-theme=dark] .btn2,html[data-theme=dark] select,html[data-theme=dark] input,html[data-theme=dark] textarea{background:var(--card);color:var(--ink)}
+html[data-theme=dark] .chip[aria-pressed=true]{background:var(--sun);color:#10242A;border-color:var(--sun)}
+html[data-theme=dark] .info{background:#1C3238}
+html[data-theme=dark] [class*=text-slate]{color:#A9BEBA}
+html[data-theme=dark] .btn{background:var(--sun);color:#10242A}
